@@ -1,0 +1,1 @@
+Responsible AI focuses on building systems that are fair, reliable, safe, private, secure, inclusive, transparent, and accountable. AI systems should avoid exposing sensitive data and should communicate uncertainty when needed.

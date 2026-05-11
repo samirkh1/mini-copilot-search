@@ -1,0 +1,1 @@
+Retrieval augmented generation, or RAG, is a pattern where a system retrieves relevant external information before generating an answer. This helps ground model responses in evidence instead of relying only on model memory.

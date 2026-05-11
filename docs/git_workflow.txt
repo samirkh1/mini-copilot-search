@@ -1,0 +1,1 @@
+A typical Git workflow uses branches, commits, pull requests, code review, automated tests, and merging. Developers usually create a branch for a focused change, open a pull request, respond to review comments, and merge after approval.
