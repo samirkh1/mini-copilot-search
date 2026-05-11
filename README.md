@@ -1,25 +1,12 @@
 # Mini Copilot Search
 
-A tiny toy project that searches local text documents and returns a grounded answer with sources.
+A tiny toy project that retrieves local documents and answers questions with source citations.
 
 ## Goal
 
-Practice a realistic SWE workflow:
-
-- Git branches
-- GitHub pull requests
-- Code review
-- CI checks
-- Small search / AI-style feature development
+Practice an intern-style software engineering workflow using Git, GitHub, PRs, code review, CI, and small AI/search-style features.
 
 ## Usage
 
 ```bash
 python -m mini_search.search_app "What is RAG?"
-
-## Development
-Run tests with:
-
-```bash
-python -m unittest discover -s tests
-```
