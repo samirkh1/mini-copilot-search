@@ -34,6 +34,15 @@ class SearchAppTests(unittest.TestCase):
         self.assertIn("I don't have enough information", answer)
         self.assertIn("Sources:", answer)
         self.assertIn("None", answer)
+    
+    def test_retrieve_empty_query_returns_no_results(self):
+        documents = {
+            "docs/rag.txt": "RAG retrieves external evidence."
+        }
+
+        results = retrieve("", documents)
+
+        self.assertEqual(results, [])
 
     def test_build_answer_includes_sources(self):
         documents = {

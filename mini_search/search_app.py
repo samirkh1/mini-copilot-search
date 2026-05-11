@@ -48,6 +48,9 @@ def load_documents(docs_dir: str = "docs") -> Dict[str, str]:
 
 def retrieve(query: str, documents: Dict[str, str], top_k: int = 2) -> List[SearchResult]:
     """Return the top-k documents with a positive relevance score."""
+    if not tokenize(query):
+        return []
+
     results = []
 
     for source, text in documents.items():
