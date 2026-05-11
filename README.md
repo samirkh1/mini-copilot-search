@@ -16,3 +16,10 @@ Practice a realistic SWE workflow:
 
 ```bash
 python -m mini_search.search_app "What is RAG?"
+
+## Development
+Run tests with:
+
+```bash
+python -m unittest discover -s tests
+```
