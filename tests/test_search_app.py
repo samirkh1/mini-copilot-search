@@ -1,6 +1,6 @@
 import unittest
 
-from mini_search.search_app import build_answer, retrieve, score_document, tokenize
+from mini_search.search_app import build_answer, first_sentence, retrieve, score_document, tokenize
 
 
 class SearchAppTests(unittest.TestCase):
@@ -45,6 +45,10 @@ class SearchAppTests(unittest.TestCase):
 
         self.assertIn("RAG retrieves external evidence", answer)
         self.assertIn("docs/rag.txt", answer)
+    
+    def test_first_sentence_returns_only_first_sentence(self):
+        text = "First sentence. Second sentence."
+        self.assertEqual(first_sentence(text), "First sentence.")
 
 
 if __name__ == "__main__":

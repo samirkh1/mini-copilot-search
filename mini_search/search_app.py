@@ -59,6 +59,11 @@ def retrieve(query: str, documents: Dict[str, str], top_k: int = 2) -> List[Sear
     results.sort(key=lambda result: result.score, reverse=True)
     return results[:top_k]
 
+def first_sentence(text: str) -> str:
+    """Return the first sentence from a document."""
+    sentences = re.split(r"(?<=[.!?])\s+", text.strip())
+    return sentences[0] if sentences else text
+
 
 def build_answer(query: str, results: List[SearchResult]) -> str:
     """Build a simple grounded answer using retrieved documents."""
@@ -69,7 +74,7 @@ def build_answer(query: str, results: List[SearchResult]) -> str:
 
     answer = (
         "Answer:\n"
-        f"{best_result.text}\n\n"
+        f"{first_sentence(best_result.text)}\n\n"
         "Sources:\n"
     )
 
